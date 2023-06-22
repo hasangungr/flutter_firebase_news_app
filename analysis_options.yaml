@@ -24,7 +24,7 @@ linter:
   rules:
 
     #public metotların hepsine birer tane döküman eklemelisin #todo change english
-    public_member_api_docs:false  
+    public_member_api_docs: false  
 
 # Additional information about this file can be found at
 # https://dart.dev/guides/language/analysis-options

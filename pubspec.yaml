@@ -38,7 +38,7 @@ dependencies:
   #easy_localization: ^3.0.2
   flutter_riverpod: ^2.3.6 #State Management
   kartal: ^3.0.0 #Extension
-
+  firebase_core: ^2.14.0
   
 
 

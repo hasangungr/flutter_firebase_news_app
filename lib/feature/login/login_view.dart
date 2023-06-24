@@ -18,7 +18,15 @@ class _LoginViewState extends ConsumerState<LoginView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: Text(ref.watch(loginProvider).toString()),
+      body: Text(
+        ref.watch(loginProvider).toString(),
+        style: const TextStyle(fontSize: 43),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          ref.watch(loginProvider.notifier).increment();
+        },
+      ),
     );
   }
 }

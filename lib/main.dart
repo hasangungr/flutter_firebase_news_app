@@ -1,13 +1,11 @@
-import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_news_app/feature/login/login_view.dart';
-import 'package:flutter_firebase_news_app/firebase_options.dart';
+ import 'package:flutter_firebase_news_app/product/initialize/application_start.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'feature/home/home_view.dart';
+
 Future<void> main() async {
-  await Firebase.initializeApp(
-    options: DefaultFirebaseOptions.currentPlatform,
-  );
+  await ApplicationStart.init();
   runApp(const ProviderScope(child: MyApp()));
 }
 
@@ -18,12 +16,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginView(),
+      home: const HomeView(),
     );
   }
 }

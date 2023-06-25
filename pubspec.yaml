@@ -28,20 +28,22 @@ environment:
 # the latest version available on pub.dev. To see which dependencies have newer
 # versions available, run `flutter pub outdated`.
 dependencies:
+  cloud_firestore: ^4.8.1
   cupertino_icons: ^1.0.5
+  equatable: ^2.0.5
+  firebase_core: ^2.14.0
   flutter:
     sdk: flutter
-
   
-  
-  #Core
-  #easy_localization: ^3.0.2
   flutter_riverpod: ^2.3.6 #State Management
   kartal: ^3.0.0 #Extension
-  firebase_core: ^2.14.0
+
+
+
   
 
-
+  
+  
 dev_dependencies:
   flutter_test:
     sdk: flutter

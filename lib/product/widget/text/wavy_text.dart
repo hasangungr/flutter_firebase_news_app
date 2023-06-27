@@ -1,8 +1,7 @@
 import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_firebase_news_app/product/constants/color_constants.dart';
 import 'package:kartal/kartal.dart';
-
-import '../../constants/color_constants.dart';
 
 class WavyBoldText extends StatelessWidget {
   const WavyBoldText({required this.title, super.key});

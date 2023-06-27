@@ -1,12 +1,12 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter_firebase_news_app/product/utility/base/base_firebase_model.dart';
 
+// ignore: must_be_immutable
 class NumberModel extends Equatable
     with IdModel, BaseFirebaseModel<NumberModel> {
   NumberModel({
     this.number,
   });
-
   final String? number;
 
   NumberModel copyWith({

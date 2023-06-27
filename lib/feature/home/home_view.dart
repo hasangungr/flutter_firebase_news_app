@@ -1,8 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_firebase_news_app/product/models/news.dart';
-import 'package:flutter_firebase_news_app/product/utility/exception/custom_exception.dart';
-import 'package:kartal/kartal.dart';
+ import 'package:kartal/kartal.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -23,7 +22,7 @@ class _HomeViewState extends State<HomeView> {
         return const NewsModel().fromFirebase(snapshot);
       },
       toFirestore: (value, options) { //modelli veriyi firestore tipine dönüştürür
-        if (value == null) throw FirebaseCustomException('$value is null');
+//        if (value == null) throw FirebaseCustomException('$value is null');
 
         return value.toJson();
       },
@@ -51,14 +50,14 @@ class _HomeViewState extends State<HomeView> {
                   itemBuilder: (context, index) => Card(
                       child: Column(children: [
                     Image.network(
-                      values[index]?.backgroundImage ?? '',
-                      height: context.height,
+                      values[index].backgroundImage ?? '',
+                      height: context.size!.height,
                     ),
                     Text(
-                      values[index]!.title ?? '',
-                      style: context.textTheme.labelLarge,
+                      values[index].title ?? '',
+                      style: context.general.textTheme.labelLarge,
                     )
-                  ])),
+                  ],),),
                 );
               } else {
                 return const SizedBox();

@@ -1,9 +1,11 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-import '../exception/custom_exception.dart';
+import 'package:flutter_firebase_news_app/product/utility/exception/custom_exception.dart';
+
+
 
 mixin IdModel {
-  String? get id;
+   String? get id;
 }
 
 mixin BaseFirebaseModel<T extends IdModel> {

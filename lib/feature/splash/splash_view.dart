@@ -48,7 +48,7 @@ class _SplashViewState extends ConsumerState<SplashView>
 
 mixin _SplashViewListenMixin on ConsumerState<SplashView> {
   void listenAndNavigate(
-      StateNotifierProvider<SplashProvider, SplashState> splashProv) {
+      StateNotifierProvider<SplashProvider, SplashState> splashProv,) {
     ref.listen(splashProv, (previous, next) {
       if (next.isRequiredForceUpdate ?? false) {
         showAboutDialog(context: context);

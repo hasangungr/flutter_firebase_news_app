@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 
-@immutable //No variable defining
-class ImageConstants {
-  const ImageConstants._();
+enum ImageConstants {
+  microphone('mic'),
+  appIcon('app_logo');
 
-  static String microphone = 'icon_mic.png'.iconToPng;
-}
+  final String value;
 
-extension _StringPath on String {
-  String get iconToPng => 'assets/icon$this.png';
+  // ignore: sort_constructors_first
+  const ImageConstants(this.value);
+
+  String get toPng => 'assets/icons/icon_$value.png';
+  Image get toImage => Image.asset(toPng);
 }

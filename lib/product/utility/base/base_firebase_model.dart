@@ -9,7 +9,7 @@ mixin IdModel {
 mixin BaseFirebaseModel<T extends IdModel> {
   T fromJson(Map<String, dynamic> json);
 
-  T? fromFirebase(DocumentSnapshot<Map<String, dynamic>> snapshot) {
+  T fromFirebase(DocumentSnapshot<Map<String, dynamic>> snapshot) {
     final value = snapshot.data();
     if (value == null) {
       throw FirebaseCustomException('$snapshot data is null');

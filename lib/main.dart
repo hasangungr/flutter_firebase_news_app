@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
- import 'package:flutter_firebase_news_app/product/initialize/application_start.dart';
+import 'package:flutter_firebase_news_app/feature/splash/splash_view.dart';
+import 'package:flutter_firebase_news_app/product/initialize/application_start.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
-
-import 'feature/home/home_view.dart';
 
 Future<void> main() async {
   await ApplicationStart.init();
@@ -15,14 +14,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return const MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
-      ),
-      home: const HomeView(),
+      
+      home: SplashView(),
     );
   }
 }

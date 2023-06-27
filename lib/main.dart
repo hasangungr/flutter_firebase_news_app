@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_news_app/feature/splash/splash_view.dart';
+import 'package:flutter_firebase_news_app/feature/auth/auth_view.dart';
+import 'package:flutter_firebase_news_app/product/initialize/app_theme.dart';
 import 'package:flutter_firebase_news_app/product/initialize/application_start.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
@@ -14,10 +15,10 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      
-      home: SplashView(),
+      theme: CustomAppTheme().theme,
+      home: const AppAuthView(),
     );
   }
 }

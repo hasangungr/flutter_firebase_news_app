@@ -51,7 +51,7 @@ class _HomeViewState extends State<HomeView> {
                       child: Column(children: [
                     Image.network(
                       values[index].backgroundImage ?? '',
-                      height: context.size!.height,
+                      height: 150,
                     ),
                     Text(
                       values[index].title ?? '',

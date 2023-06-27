@@ -5,4 +5,6 @@ class StringConstants {
   const StringConstants._();
 
   static String appName = 'News App';
+
+  static String countinueApp = 'Continue To App';
 }

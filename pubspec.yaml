@@ -34,11 +34,14 @@ dependencies:
   equatable: ^2.0.5
   firebase_auth: ^4.6.3
   firebase_core: ^2.14.0
+  firebase_ui_auth: ^1.5.0
+  firebase_ui_oauth_google: ^1.2.4
   flutter:
     sdk: flutter
   
   flutter_riverpod: ^2.3.6 #State Management
   kartal: ^3.0.0 #Extension
+  shared_preferences: ^2.1.2
 
 
 

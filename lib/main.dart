@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_firebase_news_app/feature/auth/auth_view.dart';
+ import 'package:flutter_firebase_news_app/feature/home/home_view.dart';
 import 'package:flutter_firebase_news_app/product/initialize/app_theme.dart';
 import 'package:flutter_firebase_news_app/product/initialize/application_start.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: CustomAppTheme().theme,
-      home: const AppAuthView(),
+      home: const HomeView(),
     );
   }
 }

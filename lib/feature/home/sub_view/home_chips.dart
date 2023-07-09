@@ -1,11 +1,8 @@
-
-
 part of '../home_view.dart';
 
-
 class _ActiveChip extends StatelessWidget {
-  const _ActiveChip();
-
+  const _ActiveChip(this.tag);
+  final Tags tag;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -14,7 +11,7 @@ class _ActiveChip extends StatelessWidget {
         padding: context.padding.paddingLow,
         backgroundColor: ColorConstants.purplePrimary,
         label: Text(
-          'label active',
+          tag.name ?? '',
           style: context.general.textTheme.bodySmall
               ?.copyWith(color: ColorConstants.white),
         ),
@@ -24,7 +21,8 @@ class _ActiveChip extends StatelessWidget {
 }
 
 class _PassiveChip extends StatelessWidget {
-  const _PassiveChip();
+  const _PassiveChip(this.tag);
+  final Tags tag;
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +31,7 @@ class _PassiveChip extends StatelessWidget {
       child: Chip(
         padding: context.padding.paddingLow,
         backgroundColor: ColorConstants.grayLighter,
-        label: const Text('passive'),
+        label: Text(tag.name ?? ''),
       ),
     );
   }
